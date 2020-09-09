@@ -41,5 +41,4 @@ update-grub
 echo '[*] Freezing Linux Kernel Updates'
 for LINE in `dpkg -l | grep linux | grep -v "libse" | grep -v "console-setup" | cut -d ' ' -f 3`;do apt-mark hold $LINE; done
 
-echo '[*] Kernel Downgrade Finished - Rebooting now!'
-reboot now
+echo '[*] Kernel Downgrade Finished - Reboot Required!'
